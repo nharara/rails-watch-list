@@ -1,11 +1,21 @@
-// .king-card {
-//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-//   background-color: rgba(255, 255, 255, 0.15);
-//   backdrop-filter: blur(10px);
-//   border: 2px solid white;
-//   border-radius: 15px;
-//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-// }
+body {
+  background-image: url('https://i.redd.it/p8tohyn245b61.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+  border: 0.5px solid white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-container h1 {
+  color: white;
+}
 
 .card-trip {
   overflow: hidden;
@@ -28,6 +38,14 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  color: grey;
+}
+
+.pt-3 h1 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: grey;
 }
 
 .card-trip p {
@@ -52,13 +70,14 @@
 
 }
 
-a {
+.card-category a {
   text-decoration: none;
-  color: black;
+  color: $white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-a .hover {
-  color: white;
+.card-category a:hover {
+  color: $gray;
 }
 
 .card-category {
@@ -68,7 +87,6 @@ a .hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);

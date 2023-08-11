@@ -1,0 +1,13 @@
+.new-list a {
+  text-decoration: none;
+  color: grey;
+}
+
+.new-list {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px);
+  border: 0.5px solid white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
