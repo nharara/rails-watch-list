@@ -13,6 +13,12 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.bottom-links a {
+  text-decoration: none;
+  color: grey;
+}
+
+
 .card-container h1 {
   color: white;
 }
@@ -32,6 +38,15 @@ body {
   height: 480px;
   width: 100%;
   object-fit: cover;
+}
+
+.card-trip a {
+  text-decoration: none;
+  color: grey;
+}
+
+.card-trip a:hover {
+  text-decoration: none;
 }
 
 .card-trip h2 {
