@@ -1,0 +1,14 @@
+<div class="king-container container mt-3">
+  <h1>Your Lists</h1>
+  <div class="king-card">
+    <div class="new-list btn btn-light mb-3"><%= link_to "✐ Make A New List", new_list_path(@list) %></div>
+    <div class="cards mb-3">
+      <% @lists.each do |list| %>
+        <div class="card-category">
+          <h2><%= link_to list.name, list_path(list) %></h2>
+        </div>
+        <%# <p>Product description with <strong>relevant info</strong> only.</p> %>
+      <% end %>
+    </div>
+  </div>
+</div>
