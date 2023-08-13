@@ -1,11 +1,49 @@
-<div class="container card-container mt-3 mb-3">
-  <h1 class="pt-3">Your Lists</h1>
-  <div class="new-list btn btn-light mb-3"><%= link_to "✐ Make A New List", new_list_path(@list) %></div>
-  <div class="cards mb-3">
-    <% @lists.each do |list| %>
-      <div class="item card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>)">
-        <h2><%= link_to list.name, list_path(list) %></h2>
+<div class="king-container">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Messages</a>
+          </li>
+          <li class="nav-item dropdown">
+            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://avatars.githubusercontent.com/u/135594820?v=4" />
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
+            </div>
+          </li>
+          <!--li class="nav-item"-->
+          <!--/li-->
+        </ul>
       </div>
-    <% end %>
+    </div>
+  </div>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://i.redd.it/p8tohyn245b61.png');">
+    <div class="container">
+      <h1>MyFilmList</h1>
+      <p>Curation tool for all of your film list making needs</p>
+      <div class="new-list btn btn-light mb-3"><%= link_to "✐ Make A New List", new_list_path(@list) %></div>
+    </div>
+  </div>
+  <div class="container card-container mt-3 mb-3">
+    <h3 class="cards-title pt-3">Your Lists</h3>
+    <div class="cards mb-3">
+      <% @lists.each do |list| %>
+        <div class="item card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>)">
+          <h2><%= link_to list.name, list_path(list) %></h2>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
